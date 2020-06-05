@@ -79,7 +79,7 @@ D_trainer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(D_loss,
 G_trainer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(G_loss, var_list=g_vars)
 
 batch_size = 100
-epochs = 1000
+epochs = 16000
 init = tf.global_variables_initializer()
 samples = []
 with tf.Session() as sess:
@@ -102,5 +102,11 @@ with tf.Session() as sess:
 		gen_sample = sess.run(generator(z, True), feed_dict={z: sample_z})
 		samples.append(gen_sample)
 
-plt.imshow(samples[-1].reshape(28, 28))
+
+fig = plt.figure(figsize=(15, 5))
+r = 1
+c = 6
+for img, i in zip(samples[len(samples)-5:], range(1, r*c, 1)):
+	fig.add_subplot(r, c, i)
+	plt.imshow(img.reshape(28, 28))
 plt.show()
