@@ -66,7 +66,7 @@ steps = 50000000
 with tf.Session() as sess:
 	sess.run(init)
 	for i in range(steps):
-		print(i)
+		# print(i)
 		batch_X, batch_Y = mnist.train.next_batch(50)
 		sess.run(train, {x: batch_X, y_true: batch_Y, hold_prob: 0.5})
 		if i % 100 == 0:
