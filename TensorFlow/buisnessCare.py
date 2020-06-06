@@ -1,6 +1,7 @@
 import numpy as np
-import tensorflow as tf
 from sklearn import preprocessing
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 class AudioBooksDataReader:
