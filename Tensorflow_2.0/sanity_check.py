@@ -8,6 +8,8 @@ try:
 except:
 	missing_modules.append("Tensorflow>=2.0")
 
+
+## output the missing modules, if any ##
 if missing_modules == []:
 	print("You have all of the needed modules")
 else:
