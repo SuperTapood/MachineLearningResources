@@ -1,4 +1,6 @@
 ## SANITY CHECK FOR THE ENTIRE FOLDER ##
+## TODO ##
+# tensorflow_probability
 
 
 missing_modules = []
@@ -9,7 +11,7 @@ try:
 	assert int(tf.__version__[0]) == 2
 except:
 	missing_modules.append("Tensorflow>=2.0")
-	
+
 ## six ##
 try:
 	import six
