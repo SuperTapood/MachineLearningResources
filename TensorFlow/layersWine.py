@@ -1,10 +1,10 @@
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import pandas as pd
 from sklearn.metrics import classification_report, confusion_matrix
-from tensorflow.contrib.layers import fully_connected
+from tensorflow.keras.layers import Dense as fully_connected
 
 
 wine_data = load_wine()

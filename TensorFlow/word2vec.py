@@ -7,12 +7,13 @@ import zipfile
 import numpy as np
 from six.moves import urllib
 from six.moves import xrange 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from collections import Counter
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 from time import time
 
+tf.disable_eager_execution()
 data_url = 'http://mattmahoney.net/dc/text8.zip'
 data_dir = "word2vec_data/words"
 

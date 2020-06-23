@@ -2,6 +2,7 @@ import numpy as np
 from sklearn import preprocessing
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
+assert tf.test.is_gpu_available()
 
 
 class AudioBooksDataReader:
