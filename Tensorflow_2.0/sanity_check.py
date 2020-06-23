@@ -9,18 +9,26 @@ try:
 	assert int(tf.__version__[0]) == 2
 except:
 	missing_modules.append("Tensorflow>=2.0")
+	
+## six ##
 try:
 	import six
 except:
 	missing_modules.append("six")
+
+## matplotlib ## 
 try:
 	import matplotlib
 except:
 	missing_modules.append("matplotlib")
+
+## pandas ##
 try:
 	import pandas
 except:
 	missing_modules.append("pandas")
+
+## numpy ##
 try:
 	import numpy
 except:
