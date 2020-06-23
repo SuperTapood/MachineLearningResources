@@ -1,4 +1,11 @@
 ## SANITY CHECK FOR THE ENTIRE FOLDER ##
+## TODO ##
+# numpy
+# pandas
+# matplotlib
+# six
+
+
 missing_modules = []
 
 ## tensorflow ##
