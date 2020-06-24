@@ -36,6 +36,12 @@ try:
 except:
 	missing_modules.append("numpy")
 
+## tensorflow_probabilities
+try:
+	import tensorflow_probability
+except:
+	missing_modules.append("tensorflow_probability")
+
 ## output the missing modules, if any ##
 if missing_modules == []:
 	print("You have all of the needed modules")
