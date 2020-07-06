@@ -46,6 +46,8 @@ for episode in range(EPISODES):
 		else:
 			action = np.argmax(Q[state, :])
 		new_state, reward, done, _ = env.step(action)
+		print()
+		print(state)
 		Q[state, action] = Q[state, action] + LEARNING_RATE * (reward + GAMMA * np.max(Q[new_state, :]) - Q[state, action])
 		state = new_state
 		if done:
